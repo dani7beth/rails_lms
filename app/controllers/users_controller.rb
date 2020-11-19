@@ -13,7 +13,11 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    @user.save ? redirect_to @user : render :new #if it sucessfully saves true else false
+    if @user.save 
+       redirect_to @user 
+    else  
+      render :new #if it sucessfully saves true else false
+    end
   end
 
   def destroy
