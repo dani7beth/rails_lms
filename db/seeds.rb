@@ -41,8 +41,6 @@ users = []
 courses = []
 roles = ['Student', 'TA', 'Teacher']
 
-User.destroy_all
-
 30.times do |i|
     users << User.create(first_name: Faker::JapaneseMedia::SwordArtOnline.game_name, last_name: Faker::Name.last_name)
 end
